@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="submit"], button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #0056b3;
+        }
+
+        #step1 {
+            display: block;
+        }
+
+        #step2, #step3, #step4, #step5, #step6, #step7, #step8, #step9, #step10, #step11, #step12, #step13, #step14 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Kavya CSC Center</h1>
+    <h2 style="text-align: center;">ಸದಾ ನಿಮ್ಮ ಸೇವೆಯಲ್ಲಿ</h2>
+    <h3 style="text-align: center;">Generate Job Notification PDF Web</h3>
+    <form id="jobForm" action="/generate_pdf" method="post">
+
+            <label for="application">Application Name with How Many Posts:</label>
+            <input type="text" id="application" name="application" required>
+
+            <label for="qualification">Required Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required>
+
+            <label for="req1">Required Document 1:</label>
+            <input type="text" id="req1" name="req1" required>
+
+            <label for="req2">Required Document 2:</label>
+            <input type="text" id="req2" name="req2" required>
+
+            <label for="req3">Required Document 3:</label>
+            <input type="text" id="req3" name="req3" required>
+            
+            <label for="req4">Required Document 4:</label>
+            <input type="text" id="req4" name="req4" required>
+        
+            <label for="req5">Required Document 5:</label>
+            <input type="text" id="req5" name="req5" required>        
+
+            <label for="req6">Required Document 6 (start with --):</label>
+            <input type="text" id="req6" name="req6">
+
+            <label for="req7">Required Document 7 (start with --):</label>
+            <input type="text" id="req7" name="req7">
+
+
+            <label for="req8">Required Document 8 (start with --):</label>
+            <input type="text" id="req8" name="req8">
+
+
+            <label for="last_date">Last Date to Apply:</label>
+            <input type="date" id="last_date" name="last_date" required>
+
+            <label for="contact_no">Contact Number:</label>
+            <input type="text" id="contact_no" name="contact_no" required>
+
+
+            <label for="online_fee">Online Fees For OBC/General:</label>
+            <input type="text" id="online_fee" name="online_fee" required>
+
+            <label for="sc_fees">Online Fees For SC/ST:</label>
+            <input type="text" id="sc_fees" name="sc_fees" required>
+            <button onclick="submitForm()">Submit</button>
+
+    </form>
+</div>
+
+<script>
+    function submitForm() {
+        document.getElementById('jobForm').submit();
+    }
+</script>
+
+
+</script>
+</body>
+</html>
